@@ -35,5 +35,5 @@ class CommentViewSet(viewsets.ModelViewSet):
             post=self.get_post()
         )
 
-    def get_post(self): 
+    def get_post(self):
         return get_object_or_404(Post, pk=self.kwargs[self.pk_url_kwarg])
