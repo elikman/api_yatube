@@ -4,7 +4,6 @@ from rest_framework.authtoken import views
 
 from .views import CommentViewSet, GroupViewSet, PostViewSet
 
-# Routers for api
 
 router = routers.DefaultRouter()
 router.register('posts', PostViewSet)
@@ -14,7 +13,6 @@ router.register(
     basename='comment'
 )
 
-# urls
 
 urlpatterns = [
     path('api-token-auth/', views.obtain_auth_token),
